@@ -1,215 +1,328 @@
 <template>
-  <!-- Terbaru -->
-  <body>
+  <div class="all">
+    <!-- Nav -->
     <nav>
-      <div class="header">
-        <!-- Logo -->
+      <div class="wrapper">
         <div class="logo">
           <router-link to="/">
             <img
-              src="@/assets/logo.png"
+              src="@/assets/logo-mds.jpeg"
               alt="logo"
-              width="147px"
-              height="85px"
+              width="100px"
+              height="100px"
             />
           </router-link>
         </div>
-        <input class="menu-btn" type="checkbox" id="menu-btn" />
-        <label class="menu-icon" for="menu-btn"
-          ><span class="nav-icon"></span
-        ></label>
+        <input type="radio" name="slider" id="menu-btn" />
+        <input type="radio" name="slider" id="close-btn" />
+        <ul class="nav-links">
+          <label for="close-btn" class="btn close-btn"
+            ><i class="fas fa-times"></i
+          ></label>
+          <li><a href="/#program">Progam</a></li>
+          <li><a href="#">Layanan</a></li>
 
-        <!-- Menu -->
-        <ul class="menu">
           <li>
-            <router-link to="/">Beranda</router-link>
+            <a href="/#berita">Berita</a>
           </li>
+          <li><a href="#">Tentang Kami</a></li>
           <li>
-            <router-link to="diagnostik">Tes Diagnostik</router-link>
-          </li>
-          <li>
-            <router-link to="sumber-belajar">Sumber Belajar</router-link>
-          </li>
-          <li>
-            <router-link to="tutor">Tutor</router-link>
-          </li>
-          <li>
-            <router-link to="mulaimenulis" type="button" class="button"
-              >Mulai Menulis</router-link
+            <router-link
+              to="infaq"
+              type="button"
+              class="button"
+              style="color: #fff; border-radius: 30px"
+              >Infaq Sekarang</router-link
             >
           </li>
+          <li class="languange">
+            <a class="button1" type="button">ARB</a>
+            |
+            <a class="button1" type="button">ID</a>
+          </li>
         </ul>
+        <label for="menu-btn" class="btn menu-btn">
+          <b-icon icon="list" aria-hidden="true"></b-icon>
+        </label>
       </div>
     </nav>
-  </body>
+    <div id="Search" style="display: none">
+      <div class="form_search">
+        <b-form-input type="search" class="cari" placeholder="Search">
+        </b-form-input>
+        <b-btn class="tombol">search</b-btn>
+      </div>
+    </div>
+  </div>
 </template>
-
+<script src="./js/navbar.js" />
 <style lang="scss" scoped>
-body {
-  margin: 0;
-  font-family: Poppins;
-  // background-color: #0a4da3;
+.button {
+  display: block;
+  background: #00a279;
+  line-height: 25px;
+  width: 200px;
+  margin-top: 11px;
+  text-align: center;
+  @media screen and (max-width: 768px) {
+    width: 80%;
+    line-height: 40px;
+  }
 }
 
-a {
-  color: #fff;
-}
-
-nav {
-  background-color: #0a4da3;
-  position: fixed;
+.form_search {
+  padding: 10px 0px 10px 0px;
+  color: #00a279;
+  display: flex;
   width: 100%;
-  z-index: 99;
+  justify-content: center;
+  align-items: center;
+  .cari {
+    color: #00a279;
+    width: 50%;
+    height: 38px;
+    border-radius: 0px;
+    border: 1px solid #00a279;
+  }
+  .tombol {
+    border-radius: 0px;
+    width: auto;
+    border: 1px solid #00a279;
+    text-align: left;
+    background: #00a279;
+  }
 }
-nav .header {
+
+.button1 {
+  display: inline-block;
+  width: auto;
+  line-height: 10px;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+  }
+}
+
+.search {
+  width: 40px;
+  color: #00a279;
+  margin: 0px 0px 0px 0px;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    width: auto;
+    float: right;
+    margin: 10px 0px 10px 0px;
+    // border: 1px solid red;
+  }
+}
+
+// arb dan id
+.languange {
+  // border: solid 1px black;
+  @media screen and (max-width: 768px) {
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    line-height: 30px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+nav {
   position: relative;
-  max-width: 1440px;
+  z-index: 99;
+  width: 100%;
+  // background: #242526;
+  background: #fff;
+}
+nav .wrapper {
+  position: relative;
+  max-width: 1300px;
   padding: 0px 30px;
-  height: auto;
-  // line-height: 70px;
+  height: 90px;
+  line-height: 70px;
   margin: auto;
-  // display: flex;
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
-.header {
-  // background-color: #0a4da3;
-  // box-shadow: 1px 1px 4px rgba();
-  // position: fixed;
-  // width: 100%;
-  // z-index: 3;
+.wrapper .logo img {
+  font-weight: 600;
 }
-
-.header ul {
-  margin: 2%;
-  padding: 0;
+.wrapper .nav-links {
+  display: inline-flex;
+}
+.nav-links li {
   list-style: none;
-  overflow: hidden;
-  // background-color: #0a4da3;
-  // font-size: 20px;
+  // border: 1px solid red;
 }
-
-.header ul a {
-  display: block;
-  // outline: 1px solid red;
-  padding: 20px;
-  // border-right: 1px solid #aaa;
+.nav-links li a {
+  // color: #f2f2f2;
+  // border: 1px solid red;
+  color: #00a279;
   text-decoration: none;
-  height: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 9px 15px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
 }
-
-.header ul a:hover {
-  color: #fff;
+.nav-links li a:hover {
+  // background: #3a3b3c;
 }
-
-.header ul li {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-.header .logo {
-  float: left;
-  display: block;
-  padding: 10px 20px;
-}
-
-.header .menu {
-  clear: both;
-  text-align: right;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-.header .menu-icon {
-  padding: 50px 20px;
-  position: relative;
-  float: right;
-  cursor: pointer;
-}
-
-.header .menu-icon .nav-icon {
-  background: #fff;
-  display: block;
-  height: 2px;
-  width: 30px;
-  position: relative;
-  transition: background 0.2s ease-out;
-}
-
-.header .menu-icon .nav-icon:before {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: 10px;
-}
-
-.header .menu-icon .nav-icon:after {
-  background: #fff;
-  content: "";
-  display: block;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  top: -10px;
-}
-
-.header .menu-btn {
+.nav-links .mobile-item {
   display: none;
 }
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 240px;
+.nav-links li:hover .mega-box {
+  transition: all 0.3s ease;
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a {
+  width: 100%;
+  display: block;
+  padding: 0 0 0 15px;
+  font-weight: 400;
+  border-radius: 0px;
+}
+.content .row img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content .row header {
+  color: #f2f2f2;
+  font-size: 20px;
+  font-weight: 500;
+}
+.wrapper .btn {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  width: 30px;
+  height: 30px;
+  // background: black;
+  // border: 1px solid black;
+  color: black;
+}
+.wrapper .btn.close-btn {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  color: #fff;
+  background: red;
 }
 
-.header .menu-btn:checked ~ .menu-icon .nav-icon {
-  background: transparent;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.header .menu-btn:checked ~ .menu-icon .nav-icon:after {
-  transform: rotate(45deg);
-  top: 0;
-}
-
-.button {
-  background: #00a279;
-  border-radius: 42px;
-  line-height: 4px;
-  margin-top: 10px;
-  float: right;
-  width: auto;
-}
-
-@media (min-width: 68em) {
-  .header li {
-    float: left;
+@media screen and (max-width: 970px) {
+  .wrapper .btn {
+    display: block;
   }
-  .header li a {
-    padding: 20px 30px;
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    max-width: 350px;
+    top: 0;
+    left: -100%;
+    background: white;
+    display: block;
+    padding: 50px 10px;
+    line-height: 50px;
+    overflow-y: auto;
+    box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
+    transition: all 0.3s ease;
   }
-  .header .menu {
-    clear: none;
-    float: right;
-    max-height: none;
+  /* custom scroll bar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    border: solid 1px red;
   }
-  .header .menu-icon {
+  ::-webkit-scrollbar-track {
+    background: #242526;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #3a3b3c;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0%;
+  }
+  #menu-btn:checked ~ .btn.menu-btn {
     display: none;
   }
-  .button {
-    background: #00a279;
-    border-radius: 42px;
-    line-height: 4px;
-    margin-top: 10px;
+  #close-btn:checked ~ .btn.menu-btn {
+    display: block;
+    color: red($color: #d9d9d9);
   }
+  .nav-links li {
+    // margin: 15px 10px;
+  }
+  .nav-links li a {
+    padding: 0 20px;
+    display: block;
+    font-size: 20px;
+  }
+  .nav-links .drop-menu {
+    position: static;
+    opacity: 1;
+    top: 65px;
+    visibility: visible;
+    padding-left: 20px;
+    width: 100%;
+    max-height: 0px;
+    overflow: hidden;
+    box-shadow: none;
+    transition: all 0.3s ease;
+  }
+  #showDrop:checked ~ .drop-menu,
+    // #showMega:checked ~ .mega-box {
+    //   max-height: 100%;
+    // }
+    .nav-links .desktop-item {
+    display: none;
+  }
+  .nav-links .mobile-item {
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    font-weight: 500;
+    padding-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  .nav-links .mobile-item:hover {
+    background: #3a3b3c;
+  }
+  .drop-menu li {
+    margin: 0;
+  }
+  .drop-menu li a {
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .content .row .mega-links {
+    border-left: 0px;
+    padding-left: 15px;
+  }
+  .row .mega-links li {
+    margin: 0;
+  }
+  .content .row header {
+    font-size: 19px;
+  }
+}
+nav input {
+  display: none;
 }
 </style>
