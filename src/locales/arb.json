@@ -1,0 +1,21 @@
+{
+  "message": "سلام i18n !!",
+  "nav": {
+    "program": "برنامج",
+    "layanan": "خدمة",
+    "berita": "أخبار",
+    "tentang_kami": "معلومات عنا"
+  },
+  "program_kami": {
+    "title": "برامجنا",
+    "content": "لدى مكتب خدمات Lazizmu SMP MDS ثلاث ركائز رئيسية للبرامج لها هدف كبير في المساعدة على بناء أساس أساسي للبلد."
+  },
+  "pondasi": {
+    "title_ekonomi": "اقتصاد",
+    "content_ekonomi": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_sosial": "اجتماعي",
+    "content_sosial": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_pendidikan": "تعليم",
+    "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "message": "hello i18n !!",
+  "nav": {
+    "program": "Program",
+    "layanan": "Layanan",
+    "berita": "Berita",
+    "tentang_kami": "Tentang Kami"
+  },
+  "program_kami": {
+    "title": "Program Kami",
+    "content": "Kantor Layanan Lazizmu SMP MDS memiliki 3 pilar program utama yang memiliki tujuan besar dalam membantu membangun sebuah pondasi dasar sebuah negara."
+  },
+  "pondasi": {
+    "title_ekonomi": "Ekonomi",
+    "content_ekonomi": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_sosial": "Sosial",
+    "content_sosial": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_pendidikan": "Pendidikan",
+    "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  }
+}

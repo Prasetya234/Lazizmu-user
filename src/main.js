@@ -20,6 +20,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
 import { ValidationObserver, ValidationProvider, extend } from "vee-validate";
 import * as rules from "vee-validate/dist/rules";
+import i18n from './i18n'
 
 Vue.use(BootstrapVue);
 
@@ -54,8 +55,22 @@ Object.keys(rules).forEach((rule) => {
 Vue.component("ValidationObserver", ValidationObserver);
 Vue.component("ValidationProvider", ValidationProvider);
 
+router.beforeEach((to, from, next) => {
+
+  // use the language from the routing param or default language
+  let language = to.params.lang;
+  if (!language) {
+    language = 'idn'
+  }
+
+  // set the current language for i18n.
+  i18n.locale = language
+  next()
+})
+
 new Vue({
   router,
   store,
-  render: (h) => h(App),
+  i18n,
+  render: (h) => h(App)
 }).$mount("#app");

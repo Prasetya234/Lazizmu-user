@@ -18,35 +18,36 @@
                   border-left: none;
                   border-right: none;
                 "
-                >Pilihan Infaq</b-card-text
+                >Pilihan Donasi</b-card-text
               >
               <!-- form -->
               <b-form class="form">
-                <label>Jenis Infaq*</label>
+                <label>Jenis Donasi</label>
                 <b-form-select
                   class="select"
                   :options="[
                     { text: 'Zakat' },
-                    'Infaq Sedekah',
-                    'Wakaf',
-                    'Kemanusiaan',
+                    'Infaq',
+                    'Qurban'
                   ]"
                 ></b-form-select>
               </b-form>
               <b-form class="form">
-                <label>Pengkhususan infaq*</label>
+                <label>Pengkhususan Donasi</label>
                 <b-form-select
                   class="select"
                   :options="[
                     { text: 'Zakat Maal' },
-                    'Infaq Sedekah',
-                    'Wakaf',
-                    'Kemanusiaan',
+                    'Zakat Fitrah'
                   ]"
                 ></b-form-select>
               </b-form>
               <b-form class="form">
-                <label>Jumlah (Rp.) *</label>
+                <label>Keterangan Donasi</label>
+                <input class="select" />
+              </b-form>
+              <b-form class="form">
+                <label>Jumlah (Rp.)</label>
 
                 <input type="number" min="10000" class="select" />
                 <b-form-text
@@ -70,22 +71,18 @@
               >
               <!-- form -->
               <b-form class="form">
-                <label>Sapaan*</label>
+                <label>Sapaan</label>
                 <b-form-select
                   class="select"
                   :options="[{ text: 'Bapak' }, 'Ibu', 'saudara', 'Saudari']"
                 ></b-form-select>
               </b-form>
               <b-form class="form">
-                <label>Nama Lengkap*</label>
+                <label>Nama Lengkap</label>
                 <input class="select" />
               </b-form>
               <b-form class="form">
-                <label>Email*</label>
-                <input class="select" type="email" />
-              </b-form>
-              <b-form class="form">
-                <label>Telepon / HP *</label>
+                <label>Telepon / HP</label>
                 <input min="11" class="select" />
                 <b-form-text
                   style="display: inline-block; text-align: left; width: 50%"
@@ -116,7 +113,7 @@
                     </b-form-radio>
                   </div>
                 </b-tab>
-                <b-tab title="Transfer Bank" active>
+                <b-tab title="Transfer Bank">
                   <div v-for="(data2, index) in logo_image_bank" :key="index">
                     <b-form-radio name="some-radios" class="image"
                       ><img :src="data2.image" alt="logo" class="logo"

@@ -6,10 +6,10 @@
         <div class="logo">
           <router-link to="/">
             <img
-              src="@/assets/logo-mds.jpeg"
+              src="@/assets/logo-kl-lazismu-smp-mds.jpg"
               alt="logo"
               width="100px"
-              height="100px"
+              height="70px"
             />
           </router-link>
         </div>
@@ -19,26 +19,28 @@
           <label for="close-btn" class="btn close-btn"
             ><i class="fas fa-times"></i
           ></label>
-          <li><a href="/#program">Progam</a></li>
-          <li><a href="#">Layanan</a></li>
+          <li>
+            <router-link :to="`/${$i18n.locale}/#program`"><b>{{$t('nav.program')}}</b></router-link>
+          </li>
+          <li><router-link to="#"><b>{{$t('nav.layanan')}}</b></router-link></li>
 
           <li>
-            <a href="/#berita">Berita</a>
+            <router-link :to="`/${$i18n.locale}/#berita`"><b>{{$t('nav.berita')}}</b></router-link>
           </li>
-          <li><a href="#">Tentang Kami</a></li>
+          <li><router-link to="#"><b>{{$t('nav.tentang_kami')}}</b></router-link></li>
           <li>
             <router-link
               to="infaq"
               type="button"
               class="button"
-              style="color: #fff; border-radius: 30px"
-              >Infaq Sekarang</router-link
+              style="color: black; border-radius: 30px"
+              ><b>Infaq Sekarang</b></router-link
             >
           </li>
           <li class="languange">
-            <a class="button1" type="button">ARB</a>
+            <a class="button1" type="button"><b>ARB</b></a>
             |
-            <a class="button1" type="button">ID</a>
+            <a class="button1" type="button"><b>ID</b></a>
           </li>
         </ul>
         <label for="menu-btn" class="btn menu-btn">
@@ -59,7 +61,7 @@
 <style lang="scss" scoped>
 .button {
   display: block;
-  background: #00a279;
+  background: #ed8721;
   line-height: 25px;
   width: 200px;
   margin-top: 11px;
@@ -141,7 +143,6 @@ nav {
   position: relative;
   z-index: 99;
   width: 100%;
-  // background: #242526;
   background: #fff;
 }
 nav .wrapper {
@@ -168,7 +169,7 @@ nav .wrapper {
 .nav-links li a {
   // color: #f2f2f2;
   // border: 1px solid red;
-  color: #00a279;
+  color: black;
   text-decoration: none;
   font-size: 18px;
   font-weight: 500;

@@ -33,28 +33,27 @@ export default {
         },
         {
           image: mandiri,
-        }
-        
+        },
       ],
     };
   },
-  methods:{
+  methods: {
     // show_hide_text(){
     //   var showHide = document.getElementById("form");
     //   if (showHide.style.display === "none") {
-    //     showHide.style.display = "block";        
+    //     showHide.style.display = "block";
     //   } else {
     //     showHide.style.display = "none";
     //   }
     // },
-    show_hide_search(){
+    show_hide_search() {
       var showHide = document.getElementById("search");
       if (showHide.style.display === "none") {
-        showHide.style.display = "block";        
+        showHide.style.display = "block";
       } else {
         showHide.style.display = "none";
       }
-    }
+    },
   },
   mounted() {
     window.scrollTo(0, 0);

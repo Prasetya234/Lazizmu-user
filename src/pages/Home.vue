@@ -56,10 +56,9 @@
         <!-- End Image Slider 1 -->
         <!-- Card Kalimat -->
         <div class="kalimat">
-          <h3>Program Kami</h3>
+          <h3>{{$t('program_kami.title')}}</h3>
           <p>
-            Mds Filantropy Center memiliki 3 pilar program utama yang memiliki tujuan
-            besar dalam membantu membangun sebuah pondasi dasar sebuah negara
+            {{$t('program_kami.content')}}
           </p>
         </div>
         <!-- End Card Kalimat -->
@@ -69,42 +68,24 @@
           <div class="row">
             <div class="col-md-4">
               <img src="@/assets/ekonomi.png" alt="" width = '100px' height= '100px'/>
-              <h4>Ekonomi</h4>
+              <h4>{{$t('pondasi.title_ekonomi')}}</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-                atque vel nam soluta sit debitis quae quo ad, laudantium
-                incidunt quas culpa earum quaerat dolores impedit deleniti,
-                doloribus nobis nostrum!
+               {{$t('pondasi.content_ekonomi')}}
               </p>
-              <button>
-                Baca Selengkapnya<b-icon icon="caret-right-fill"></b-icon>
-              </button>
             </div>
             <div class="col-md-4">
               <img src="@/assets/sosial.png" alt="" width = '100px' height= '100px'/>
-              <h4>Sosial</h4>
+              <h4>{{$t('pondasi.title_sosial')}}</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-                atque vel nam soluta sit debitis quae quo ad, laudantium
-                incidunt quas culpa earum quaerat dolores impedit deleniti,
-                doloribus nobis nostrum!
+                {{$t('pondasi.content_sosial')}}
               </p>
-              <button>
-                Baca Selengkapnya <b-icon icon="caret-right-fill"></b-icon>
-              </button>
             </div>
             <div class="col-md-4">
               <img src="@/assets/pendidikan.png" alt="" width = '100px' height= '100px'/>
-              <h4>Pendidikan</h4>
+              <h4>{{$t('pondasi.title_pendidikan')}}</h4>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id
-                atque vel nam soluta sit debitis quae quo ad, laudantium
-                incidunt quas culpa earum quaerat dolores impedit deleniti,
-                doloribus nobis nostrum!
+               {{$t('pondasi.content_pendidikan')}}
               </p>
-              <button>
-                Baca Selengkapnya<b-icon icon="caret-right-fill"></b-icon>
-              </button>
             </div>
           </div>
         </div>

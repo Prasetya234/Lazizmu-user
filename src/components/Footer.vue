@@ -5,15 +5,15 @@
         <div class="row">
           <!-- Kolom 1 -->
           <div class="col-md-4">
-            <h4>Mds Filantropy Center </h4>
+            <h4>Kantor Layanan Lazizmu SMP MDS</h4>
             <div class="paragraf">
               <p>
                 Jl. Warung Jati Barat No.14 Jakarta Selatan 12540, <br />
                 Indonesia
               </p>
               <br />
-              <p><b-icon icon="telephone"></b-icon> (021) 27874080</p>
-              <p><b-icon icon="phone"></b-icon> 08111544488 (Whatsapp)</p>
+              <p><b-icon icon="telephone"></b-icon> (024) 8660268</p>
+              <p><b-icon icon="phone"></b-icon> 085866897627 (Whatsapp)</p>
             </div>
           </div>
           <!-- End Kolom 1 -->
@@ -22,7 +22,7 @@
             <h4>Tentang Kami</h4>
             <ul>
               <li><a href="#">Profil</a></li>
-              <li><a href="#program">Program</a></li>
+              <li><a href="/#program">Program</a></li>
               <li><a href="/infaq">Infaq</a></li>
             </ul>
           </div>
@@ -149,7 +149,7 @@ a:hover {
 }
 
 .footer {
-  background-color: #1f7c4d;
+  background-color: #53b701;
   // padding: 70px 0;
 }
 .footer-col {
