@@ -2,7 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "../pages/Home";
 import Infaq from "../pages/Infaq";
-// import Layanan from "../pages/Layanan";
+import Layanan from "../pages/Layanan";
+import Profile from "../pages/Profile";
 import i18n from '../i18n'
 
 Vue.use(Router);
@@ -33,13 +34,20 @@ let router = new Router({
             default: Infaq,
           },
         },
-        // {
-        //   path: "/layanan",
-        //   name: "Layanan",
-        //   components : {
-        //     default : Layanan
-        //   }
-        // },
+        {
+          path: "layanan",
+          name: "Layanan",
+          components : {
+            default : Layanan
+          }
+        },
+        {
+          path: "profile",
+          name: "Profile",
+          components : {
+            default : Profile
+          }
+        },
       ],
     },
   ],

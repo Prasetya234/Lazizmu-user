@@ -22,12 +22,13 @@
           <li>
             <router-link :to="`/${$i18n.locale}/#program`"><b>{{$t('nav.program')}}</b></router-link>
           </li>
-          <li><router-link to="#"><b>{{$t('nav.layanan')}}</b></router-link></li>
-
+          <li>
+          <router-link :to="`/${$i18n.locale}/layanan`"><b>{{$t('nav.layanan')}}</b></router-link>
+          </li>
           <li>
             <router-link :to="`/${$i18n.locale}/#berita`"><b>{{$t('nav.berita')}}</b></router-link>
           </li>
-          <li><router-link to="#"><b>{{$t('nav.tentang_kami')}}</b></router-link></li>
+          <li><router-link :to="`/${$i18n.locale}/profile`"><b>{{$t('nav.tentang_kami')}}</b></router-link></li>
           <li>
             <router-link
               to="infaq"

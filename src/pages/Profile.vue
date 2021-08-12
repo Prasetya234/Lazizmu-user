@@ -40,7 +40,7 @@
   </div>
 </template>
 
-<script src="./js/profil.js" />
+<script src="./js/profile.js" />
 
 <style lang="scss" scopeds>
   .all {
