@@ -4,7 +4,8 @@
     "program": "برنامج",
     "layanan": "خدمة",
     "berita": "أخبار",
-    "tentang_kami": "معلومات عنا"
+    "tentang_kami": "معلومات عنا",
+    "infaq": "إنفاق الآن"
   },
   "program_kami": {
     "title": "برامجنا",
@@ -17,5 +18,18 @@
     "content_sosial": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
     "title_pendidikan": "تعليم",
     "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  },
+  "pembayaran" : {
+    "head" : "مرحبا بكم في بوابة إنفاق ، إنفاق آمنة وسهلة",
+    "judul_card2" : "الملف الشخصي للمانح",
+    "sapaan" : "تحية",
+    "nama" : "الاسم بالكامل",
+    "tlp" : "الهاتف / الهاتف المحمول",
+    "alamat" : "تبوك",
+    "contoh" : "مثال: 085717527494",
+    "jumlah" : "المبلغ (روبية).",
+    "minimal" : "الحد الأدنى: 10000",
+    "judul_card3" : "الرجاء اختيار طريقة الدفع:",
+    "button": "Infaq الآن"
   }
 }

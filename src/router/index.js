@@ -4,6 +4,8 @@ import Home from "../pages/Home";
 import Infaq from "../pages/Infaq";
 import Layanan from "../pages/Layanan";
 import Profile from "../pages/Profile";
+import IsiBerita from "../pages/IsiBerita";
+import Pembayaran from "../pages/Pembayaran";
 import i18n from '../i18n'
 
 Vue.use(Router);
@@ -46,6 +48,20 @@ let router = new Router({
           name: "Profile",
           components : {
             default : Profile
+          }
+        },
+        {
+          path: "isi-berita",
+          name: "IsiBerita",
+          components : {
+            default : IsiBerita
+          }
+        },
+        {
+          path: "pembayaran",
+          name: "Pembayaran",
+          components : {
+            default : Pembayaran
           }
         },
       ],

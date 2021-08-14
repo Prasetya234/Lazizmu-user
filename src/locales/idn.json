@@ -4,7 +4,8 @@
     "program": "Program",
     "layanan": "Layanan",
     "berita": "Berita",
-    "tentang_kami": "Tentang Kami"
+    "tentang_kami": "Tentang Kami",
+    "infaq": "Infaq Sekarang"
   },
   "program_kami": {
     "title": "Program Kami",
@@ -17,5 +18,18 @@
     "content_sosial": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
     "title_pendidikan": "Pendidikan",
     "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  },
+  "pembayaran" : {
+    "head" : "Selamat datang di portal infaq, infaq aman dan mudah",
+    "judul_card2" : "Profil Donatur",
+    "sapaan" : "Sapaan",
+    "nama" : "Nama Lengkap",
+    "tlp" : "Telepon / HP",
+    "alamat" : "Alamat",
+    "contoh" : "Contoh: 085717527494",
+    "jumlah" : "Jumlah (Rp.)",
+    "minimal" : "Minimal : 10000",
+    "judul_card3" : "Silahkan pilih metode pembayaran :",
+    "button": "Infaq Sekarang"
   }
 }

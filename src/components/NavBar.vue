@@ -20,22 +20,32 @@
             ><i class="fas fa-times"></i
           ></label>
           <li>
-            <router-link :to="`/${$i18n.locale}/#program`"><b>{{$t('nav.program')}}</b></router-link>
+            <router-link :to="`/${$i18n.locale}/#program`"
+              ><b>{{ $t("nav.program") }}</b></router-link
+            >
           </li>
           <li>
-          <router-link :to="`/${$i18n.locale}/layanan`"><b>{{$t('nav.layanan')}}</b></router-link>
+            <router-link :to="`/${$i18n.locale}/layanan`"
+              ><b>{{ $t("nav.layanan") }}</b></router-link
+            >
           </li>
           <li>
-            <router-link :to="`/${$i18n.locale}/#berita`"><b>{{$t('nav.berita')}}</b></router-link>
+            <router-link :to="`/${$i18n.locale}/#berita`"
+              ><b>{{ $t("nav.berita") }}</b></router-link
+            >
           </li>
-          <li><router-link :to="`/${$i18n.locale}/profile`"><b>{{$t('nav.tentang_kami')}}</b></router-link></li>
+          <li>
+            <router-link :to="`/${$i18n.locale}/profile`"
+              ><b>{{ $t("nav.tentang_kami") }}</b></router-link
+            >
+          </li>
           <li>
             <router-link
-              to="infaq"
+              :to="`/${$i18n.locale}/infaq`"
               type="button"
               class="button"
               style="color: black; border-radius: 30px"
-              ><b>Infaq Sekarang</b></router-link
+              ><b>{{ $t("nav.infaq") }}</b></router-link
             >
           </li>
           <li class="languange">
