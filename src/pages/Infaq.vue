@@ -1,28 +1,35 @@
 <template>
   <div class="all">
+    <b-loading
+      :is-full-page="true"
+      v-model="isLoading"
+      :can-cancel="true"
+    ></b-loading>
     <div class="content">
       <b-button-group class="grup">
         <button
           class="button"
-          @click="ekonomiPage"
+          @click="page('ekonomi')"
           v-if="economyModel === false"
         >
           Ekonomi
         </button>
         <button
           class="button"
-          @click="ekonomiPage"
           style="background:#ed8721"
           v-if="economyModel === true"
         >
           Ekonomi
         </button>
-        <button class="button" @click="sosialPage" v-if="sosialModel === false">
+        <button
+          class="button"
+          @click="page('sosial')"
+          v-if="sosialModel === false"
+        >
           Sosial
         </button>
         <button
           class="button"
-          @click="sosialPage"
           style="background:#ed8721"
           v-if="sosialModel === true"
         >
@@ -30,14 +37,13 @@
         </button>
         <button
           class="button"
-          @click="pendidikanPage"
+          @click="page('pendidikan')"
           v-if="pendidikanModel === false"
         >
           Pendidikan
         </button>
         <button
           class="button"
-          @click="pendidikanPage"
           style="background:#ed8721"
           v-if="pendidikanModel === true"
         >
@@ -46,23 +52,19 @@
       </b-button-group>
       <div v-if="economyModel === true">
         <div class="grid">
-          <div
-            v-for="(data_ekonomi, index) in beritaEkonomi"
-            :key="index"
-            class="data"
-          >
+          <div v-for="(data, index) in beritaEkonomi" :key="index" class="data">
             <div class="card">
               <router-link to="pembayaran" style="text-decoration: none;">
-                <img :src="data_ekonomi.image" alt="" class="image" />
+                <img :src="data.image" alt="" class="image" />
               </router-link>
               <div class="card-body ">
                 <router-link to="pembayaran" style="text-decoration: none;">
                   <div class="judul">
                     <p style="color:gray; font-size:14px">
-                      {{ data_ekonomi.category }}
+                      {{ data.kategoriId.kategoriName }}
                     </p>
                     <p class="judul_berita">
-                      {{ data_ekonomi.content.judul }}
+                      {{ data.judul }}
                     </p>
                   </div>
                 </router-link>
@@ -70,13 +72,13 @@
                   <div class="foot_left">
                     <p class="donasi">Donasi Terkumpul</p>
                     <p>
-                      <b>{{ data_ekonomi.content.donasi }}</b>
+                      <b>{{ data.donasi }}</b>
                     </p>
                   </div>
                   <div class="foot_right">
                     <p class="donatur">Donatur</p>
                     <p>
-                      <b>{{ data_ekonomi.content.donatur }}</b>
+                      <b>{{ data.donatur }}</b>
                     </p>
                   </div>
                 </div>
@@ -84,18 +86,23 @@
             </div>
           </div>
         </div>
+        <div v-if="beritaEkonomi.length == 0">
+          <div style="text-align: center; padding: 170px 0px;">
+            <h2>Program Infaq Kategori Ekonomi Belum Tersedia</h2>
+          </div>
+        </div>
         <div class="foot-button">
           <button
-            v-if="beritaEkonomi.length === 3"
+            v-if="lihatSemua == false"
             class="lihat"
-            @click="showAll"
+            @click="showAll('ekonomi')"
           >
             Lihat Semua
           </button>
           <button
-            v-if="beritaEkonomi.length === berita_ekonomi.length"
+            v-if="lihatSemua == true"
             class="lihat"
-            @click="showAll"
+            @click="showAll('ekonomi')"
           >
             Ciutkan
           </button>
@@ -103,35 +110,33 @@
       </div>
       <div v-if="sosialModel === true">
         <div class="grid">
-          <div
-            v-for="(data_sosial, index) in beritaSosial"
-            :key="index"
-            class="data"
-          >
+          <div v-for="(data, index) in beritaSosial" :key="index" class="data">
             <div class="card">
               <router-link to="pembayaran" style="text-decoration: none;">
-                <img :src="data_sosial.image" alt="" class="image" />
+                <img :src="data.image" alt="" class="image" />
               </router-link>
               <div class="card-body ">
                 <router-link to="pembayaran" style="text-decoration: none;">
                   <div class="judul">
                     <p style="color:gray; font-size:14px">
-                      {{ data_sosial.category }}
+                      {{ data.kategoriId.kategoriName }}
                     </p>
-                    <p class="judul_berita">{{ data_sosial.content.judul }}</p>
+                    <p class="judul_berita">
+                      {{ data.judul }}
+                    </p>
                   </div>
                 </router-link>
                 <div class="foot">
                   <div class="foot_left">
                     <p class="donasi">Donasi Terkumpul</p>
                     <p>
-                      <b>{{ data_sosial.content.donasi }}</b>
+                      <b>{{ data.donasi }}</b>
                     </p>
                   </div>
                   <div class="foot_right">
                     <p class="donatur">Donatur</p>
                     <p>
-                      <b>{{ data_sosial.content.donatur }}</b>
+                      <b>{{ data.donatur }}</b>
                     </p>
                   </div>
                 </div>
@@ -139,18 +144,23 @@
             </div>
           </div>
         </div>
+        <div v-if="beritaSosial.length == 0">
+          <div style="text-align: center; padding: 170px 0px;">
+            <h2>Program Infaq Kategori Pendidikan Belum Tersedia</h2>
+          </div>
+        </div>
         <div class="foot-button">
           <button
-            v-if="beritaSosial.length === 3"
+            v-if="lihatSemua == false"
             class="lihat"
-            @click="showAll"
+            @click="showAll('sosial')"
           >
             Lihat Semua
           </button>
           <button
-            v-if="berita_sosial.length === beritaSosial.length"
+            v-if="lihatSemua == true"
             class="lihat"
-            @click="showAll"
+            @click="showAll('sosial')"
           >
             Ciutkan
           </button>
@@ -159,22 +169,22 @@
       <div v-if="pendidikanModel === true">
         <div class="grid">
           <div
-            v-for="(data_pendidikan, index) in beritaPendidikan"
+            v-for="(data, index) in beritaPendidikan"
             :key="index"
             class="data"
           >
             <div class="card">
               <router-link to="pembayaran" style="text-decoration: none;">
-                <img :src="data_pendidikan.image" alt="" class="image" />
+                <img :src="data.image" alt="" class="image" />
               </router-link>
               <div class="card-body ">
                 <router-link to="pembayaran" style="text-decoration: none;">
                   <div class="judul">
                     <p style="color:gray; font-size:14px">
-                      {{ data_pendidikan.category }}
+                      {{ data.kategoriId.kategoriName }}
                     </p>
                     <p class="judul_berita">
-                      {{ data_pendidikan.content.judul }}
+                      {{ data.judul }}
                     </p>
                   </div>
                 </router-link>
@@ -182,13 +192,13 @@
                   <div class="foot_left">
                     <p class="donasi">Donasi Terkumpul</p>
                     <p>
-                      <b>{{ data_pendidikan.content.donasi }}</b>
+                      <b>{{ data.donasi }}</b>
                     </p>
                   </div>
                   <div class="foot_right">
                     <p class="donatur">Donatur</p>
                     <p>
-                      <b>{{ data_pendidikan.content.donatur }}</b>
+                      <b>{{ data.donatur }}</b>
                     </p>
                   </div>
                 </div>
@@ -196,18 +206,23 @@
             </div>
           </div>
         </div>
+        <div v-if="beritaPendidikan.length == 0">
+          <div style="text-align: center; padding: 170px 0px;">
+            <h2>Program Infaq Kategori Pendidikan Belum Tersedia</h2>
+          </div>
+        </div>
         <div class="foot-button">
           <button
-            v-if="beritaPendidikan.length === 3"
+            v-if="lihatSemua == false"
             class="lihat"
-            @click="showAll"
+            @click="showAll('pendidikan')"
           >
             Lihat Semua
           </button>
           <button
-            v-if="beritaPendidikan.length === berita_pendidikan.length"
+            v-if="lihatSemua == true"
             class="lihat"
-            @click="showAll"
+            @click="showAll('pendidikan')"
           >
             Ciutkan
           </button>
@@ -285,8 +300,6 @@
             color: gray;
             width: 100%;
             height: auto;
-          }
-          p {
           }
         }
         &_right {

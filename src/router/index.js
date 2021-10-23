@@ -6,6 +6,7 @@ import Layanan from "../pages/Layanan";
 import Profile from "../pages/Profile";
 import IsiBerita from "../pages/IsiBerita";
 import Pembayaran from "../pages/Pembayaran";
+import Login from "../pages/Login";
 import i18n from '../i18n'
 
 Vue.use(Router);
@@ -28,6 +29,13 @@ let router = new Router({
           components: {
             default: Home,
           },
+        },
+        {
+          path : "login",
+          name : "Login",
+          components: {
+            default: Login,
+          }
         },
         {
           path: "infaq",

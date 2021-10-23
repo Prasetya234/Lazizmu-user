@@ -3,23 +3,30 @@
     <body>
       <nav>
         <!-- Image Slider 1 -->
-        <div id="slider">
-          <div class="slider">
-            <ul class="slides" :style="{ left: -width * current + 'px' }">
-              <li v-for="(slide, index) in slides" :key="index">
-                <img :src="slide.image" alt="logo" />
-              </li>
-            </ul>
-            <ul class="bullets">
-              <li
-                v-for="(slide, index) in slides"
-                :key="index"
-                v-html="i == current ? '&#9679;' : '&omicron;'"
-                @click="selectSlide(index)"
-              ></li>
-            </ul>
-            <!-- <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a>
+        <div class="slider1">
+          <div id="slider">
+            <div class="slider">
+              <b-loading
+                :is-full-page="false"
+                v-model="isLoading"
+                :can-cancel="true"
+              ></b-loading>
+              <ul class="slides" :style="{ left: -width * current + 'px' }">
+                <li v-for="(slide, index) in berita" :key="index">
+                  <img :src="slide.image" alt="logo" />
+                </li>
+              </ul>
+              <ul class="bullets">
+                <li
+                  v-for="(slide, index) in berita"
+                  :key="index"
+                  v-html="i == current ? '&#9679;' : '&omicron;'"
+                  @click="selectSlide(index)"
+                ></li>
+              </ul>
+              <!-- <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a>
             <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a> -->
+            </div>
           </div>
         </div>
         <!-- End Image Slider 1 -->
@@ -83,23 +90,30 @@
         </div>
         <!-- End Content Tiga -->
         <!-- Image SLider 2 -->
-        <div id="slider">
-          <div class="slider">
-            <ul class="slides" :style="{ left: -width * current + 'px' }">
-              <li v-for="(slide, index) in slides2" :key="index">
-                <img :src="slide.image" alt="logo" />
-              </li>
-            </ul>
-            <ul class="bullets">
-              <li
-                v-for="(slide, index) in slides2"
-                :key="index"
-                v-html="i == current ? '&#9679;' : '&omicron;'"
-                @click="selectSlide(index)"
-              ></li>
-            </ul>
-            <!-- <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a> -->
-            <!-- <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a> -->
+        <div class="slider2">
+          <div id="slider">
+            <div class="slider">
+              <b-loading
+                :is-full-page="false"
+                v-model="isLoading"
+                :can-cancel="true"
+              ></b-loading>
+              <ul class="slides" :style="{ left: -width * current + 'px' }">
+                <li v-for="(slide, index) in berita" :key="index">
+                  <img :src="slide.image" alt="logo" />
+                </li>
+              </ul>
+              <ul class="bullets">
+                <li
+                  v-for="(slide, index) in berita"
+                  :key="index"
+                  v-html="i == current ? '&#9679;' : '&omicron;'"
+                  @click="selectSlide(index)"
+                ></li>
+              </ul>
+              <!-- <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a> -->
+              <!-- <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a> -->
+            </div>
           </div>
         </div>
         <br />
@@ -107,31 +121,36 @@
         <!-- Card Content 2 -->
         <div class="card-dua">
           <div class="kanan">
-            <router-link :to="`/${$i18n.locale}/isi-berita`">
+            <!-- <router-link
+              :to="`/${$i18n.locale}/isi-berita`"
+              style="text-decoration:none"
+            > -->
+            <div
+              class="bungkus"
+              v-for="(data, index) in berita"
+              :key="index"
+              id="zoom-In"
+            >
               <div
-                class="bungkus"
-                v-for="(data, index) in slides2"
-                :key="index"
-                id="zoom-In"
-              >
-                <div
-                  style="
+                style="
                   cursor: pointer;
                   font-weight: bold;
                   font-size: 15px;
                   width: auto;
                 "
-                  @click="toNewsLetter(index)"
-                >
-                  <img :src="data.image" alt="logo" class="logo" /><br />
-                  {{ data.kalimat }}
-                </div>
-                <div class="catatan">
-                  <p>{{ data.jenis }}</p>
-                  <p>{{ data.tanggal }}</p>
-                </div>
+                @click="toNewsLetter(index)"
+              >
+                <img :src="data.image" alt="logo" class="logo" /><br />
+                {{ data.judul }}
               </div>
-            </router-link>
+              <div class="catatan">
+                <p>{{ data.kategoriId.kategoriName }}</p>
+                <p style="text-align: right;">
+                  {{ data.createdDate }}
+                </p>
+              </div>
+            </div>
+            <!-- </router-link> -->
           </div>
         </div>
         <br />
@@ -156,11 +175,19 @@
   width: 100%;
 }
 
+.slider2 {
+  margin-top: -50px;
+}
+
+.slider1 {
+  margin-top: 50px;
+}
+
 .slider {
   margin: 0 auto;
   padding: 0;
   width: 800px;
-  height: 400px;
+  height: 500px;
   position: relative;
   overflow: hidden;
   ul.slides {
@@ -177,6 +204,7 @@
       display: table-cell;
       img {
         width: 800px;
+        height: 100%;
       }
     }
   }
@@ -358,6 +386,7 @@ nav {
   }
   img {
     width: 100%;
+    height: 200px;
   }
   // a {
   //   color: black;
@@ -373,7 +402,8 @@ nav {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     color: #ccc;
-    font-size: 11px;
+    font-size: 12px;
+    font-weight: 500;
     @media (max-width: 768px) {
       display: inline-block;
     }

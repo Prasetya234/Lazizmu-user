@@ -2,17 +2,25 @@ export default {
   name: "IsiBerita",
   data() {
     return {
-      slides: [],
+      berita: [],
     };
   },
   methods: {
     getDataSesionNews() {
-      var khsadd87328o7r = sessionStorage.getItem("berita");
-      this.slides = JSON.parse(khsadd87328o7r);
-      this.slides.isiBerita.content[0].replace(
-        /(^|\s)(BONDOWOSO)(\s|$)/gi,
-        "$1<b>$2</b>$3"
-      );
+      let berita = sessionStorage.getItem("berita");
+      this.berita = JSON.parse(berita);
+      for (var i = 1; i < this.berita.keteranganBerita.length; i++) {
+        for (var j = 0; j < i; j++) {
+          if (
+            this.berita.keteranganBerita[i].sequenceNumber <
+            this.berita.keteranganBerita[j].sequenceNumber
+          ) {
+            let x = this.berita.keteranganBerita[i];
+            this.berita.keteranganBerita[i] = this.berita.keteranganBerita[j];
+            this.berita.keteranganBerita[j] = x;
+          }
+        }
+      }
     },
   },
   mounted() {
@@ -20,4 +28,3 @@ export default {
     window.scrollTo(0, 0);
   },
 };
-

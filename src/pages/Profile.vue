@@ -3,7 +3,7 @@
     <div class="header">
       <p>Profil</p>
       <img
-        src="https://yashirunapeduli.org/wp-content/uploads/2020/06/hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree_34998-142-1-1300x731.jpg"
+      src="@/assets/download.jpg"
         alt=""
       />
     </div>

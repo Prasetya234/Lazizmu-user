@@ -4,33 +4,35 @@
     <div class="body">
       <div class="logo">
         <img src="@/assets/logo-kl-lazismu-smp-mds.jpg" alt="" class="image" />
-        <a href="infaq"
-          ><p>{{ slides.isiBerita.title_isiberita }}</p></a
-        >
+        <a href="infaq"><p>Infaq Sekarang</p></a>
       </div>
       <!-- Judul Berita -->
       <div class="head">
         <p>
-          {{ slides.kalimat }}
+          {{ berita.judul }}
         </p>
         <div class="info">
           <p class="nama">
             <b-icon icon="person"></b-icon>Ditulis Oleh
-            <Strong>Roihan & Prasetya</Strong>
+            <Strong>{{ berita.author }}</Strong>
           </p>
           <p class="tgl">
-            <b-icon icon="calendar-date"></b-icon> {{ slides.tanggal }}
+            <b-icon icon="calendar-date"></b-icon> {{ berita.createdDate }}
           </p>
         </div>
       </div>
       <!-- Gambar Berita -->
       <div>
-        <img :src="slides.image" alt="" class="gambar1" />
+        <img :src="berita.image" alt="" class="gambar1" />
       </div>
       <!-- Isi Berita -->
-      <div class="isiberita">
-        <p v-for="data in slides.isiBerita.content" :key="data">
-          {{ data }}
+      <div
+        class="isiberita"
+        v-for="(data, index) in berita.keteranganBerita"
+        :key="index"
+      >
+        <p>
+          {{ data.keteranganBerita }}
         </p>
       </div>
       <!-- Share -->
@@ -127,7 +129,7 @@
   p {
     padding: 20px 0px;
     font-size: 15px;
-    text-align: justify;
+    text-align: left;
   }
 }
 

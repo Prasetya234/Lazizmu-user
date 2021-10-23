@@ -1,5 +1,5 @@
 export default {
-  name: "profil",
+  name: "Login",
   data() {
     return {};
   },
