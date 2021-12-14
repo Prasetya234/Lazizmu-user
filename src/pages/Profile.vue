@@ -1,39 +1,28 @@
 <template>
   <div class="all">
     <div class="header">
-      <p>Profil</p>
-      <img
-      src="@/assets/download.jpg"
-        alt=""
-      />
+      <p>{{ $t("profil.profile")}}</p>
     </div>
     <div class="body">
       <ol type="A">
-        <li>Pengertian</li>
+        <li>{{ $t("profil.pengertian")}}</li>
         <p>
-          MDS PHILANTRHOPY CENTER ialah program bekerja sama sekolah dengan
-          LAZISMU yang dirancang untuk menghimpun, menyalurkan dan mengembangkan
-          dana zakat, infak, dan sedekah masyarakat untuk pengembangan
-          program-program sekolah.
+          {{ $t("profil.pengertian_content")}}
         </p>
-        <li>Maksud Dan Tujuan</li>
+        <li>{{ $t("profil.maksud")}}</li>
         <p>
-          Maksud dan Tujuan program MDS PHILANTRHOPY CENTER ialah menghimpun,
-          menyalurkan dan mengembangkan dana zakat, infak, sedekah dan wakaf
-          sehingga dapat mendukung pengembangan program-program sekolah.
+          {{ $t("profil.maksud_content")}}
         </p>
-        <li>Jenis Program</li>
+        <li>{{ $t("profil.jenis")}}</li>
         <p>
-          INFAQ MUQOYAD PRODUKTIF (KOLAM LELE, KEBUN JAHE MERAH, LAPAK LELE,
-          DLL) INFAQ FI SABILILLAH (fokus utama untuk program MDS al Qur’an
-          Academy)
-          <ul>
-              <li>QURBAN ITU KEREN </li>
-              <li>JUM’AT BERKAH </li>
-              <li>BAKTI SOSIAL</li>
-              <li> BEASISWA MENTARI</li>
-              <li>PEDULI GURU</li>
-        </ul> 
+          {{ $t("profil.jenis_content")}}
+            <ul>
+              <li>{{ $t("profil.first")}}</li>
+              <li>{{ $t("profil.second")}}</li>
+              <li>{{ $t("profil.third")}}</li>
+              <li> {{ $t("profil.fourth")}}</li>
+              <li>{{ $t("profil.fiveth")}}</li>
+            </ul> 
         </p>
       </ol>
     </div>
@@ -51,17 +40,13 @@
   .header {
     width: 100%;
     height: auto;
-    img {
-      width: 100%;
-      height: 300px;
-      filter: opacity(30%);
-      position: relative;
-      z-index: 1;
-    }
+    max-height: 350px;
+    background-image: url('../assets/image_tentang_kami1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(90%);
     p {
-      padding: 100px 100px;
-      position: absolute;
-      z-index: 2;
+      padding: 130px 130px;
       color: #17af60;
       font-weight: bold;
       font-size: 60px;
@@ -72,17 +57,21 @@
     }
   }
   .body {
-      padding: 50px 0px;
+    padding: 50px 150px;
     margin: auto;
-    width: 70%;
+    width: 100%;  
     height: auto;
     font-size: 20px;
     font-family: "poppins";
+    @media screen and (max-width: 768px) {
+      padding: 50px 30px;   
+    }
     ol li {
         font-weight: bold;
     }
     ul li {
         font-weight: normal;
+        list-style: bold;
     }
   }
 </style>

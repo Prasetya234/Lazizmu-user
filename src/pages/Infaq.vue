@@ -50,15 +50,16 @@
           Pendidikan
         </button>
       </b-button-group>
+      <!-- berita ekonomi -->
       <div v-if="economyModel === true">
         <div class="grid">
           <div v-for="(data, index) in beritaEkonomi" :key="index" class="data">
-            <div class="card">
-              <router-link to="pembayaran" style="text-decoration: none;">
+            <div class="card" @click="clickBeritaInfaqEkonomi(index)">
+              <div>
                 <img :src="data.image" alt="" class="image" />
-              </router-link>
-              <div class="card-body ">
-                <router-link to="pembayaran" style="text-decoration: none;">
+              </div>
+              <div class="card-body">
+                <div>
                   <div class="judul">
                     <p style="color:gray; font-size:14px">
                       {{ data.kategoriId.kategoriName }}
@@ -67,7 +68,7 @@
                       {{ data.judul }}
                     </p>
                   </div>
-                </router-link>
+                </div>
                 <div class="foot">
                   <div class="foot_left">
                     <p class="donasi">Donasi Terkumpul</p>
@@ -108,15 +109,16 @@
           </button>
         </div>
       </div>
+      <!-- berita sosial -->
       <div v-if="sosialModel === true">
         <div class="grid">
           <div v-for="(data, index) in beritaSosial" :key="index" class="data">
-            <div class="card">
-              <router-link to="pembayaran" style="text-decoration: none;">
+            <div class="card" @click="clickBeritaInfaqSosial(index)">
+              <div>
                 <img :src="data.image" alt="" class="image" />
-              </router-link>
+              </div>
               <div class="card-body ">
-                <router-link to="pembayaran" style="text-decoration: none;">
+                <div>
                   <div class="judul">
                     <p style="color:gray; font-size:14px">
                       {{ data.kategoriId.kategoriName }}
@@ -125,7 +127,7 @@
                       {{ data.judul }}
                     </p>
                   </div>
-                </router-link>
+                </div>
                 <div class="foot">
                   <div class="foot_left">
                     <p class="donasi">Donasi Terkumpul</p>
@@ -146,7 +148,7 @@
         </div>
         <div v-if="beritaSosial.length == 0">
           <div style="text-align: center; padding: 170px 0px;">
-            <h2>Program Infaq Kategori Pendidikan Belum Tersedia</h2>
+            <h2>Program Infaq Kategori Sosial Belum Tersedia</h2>
           </div>
         </div>
         <div class="foot-button">
@@ -166,6 +168,7 @@
           </button>
         </div>
       </div>
+      <!-- berita pendidikan -->
       <div v-if="pendidikanModel === true">
         <div class="grid">
           <div
@@ -173,12 +176,12 @@
             :key="index"
             class="data"
           >
-            <div class="card">
-              <router-link to="pembayaran" style="text-decoration: none;">
+            <div class="card" @click="clickBeritaInfaqPendidikan(index)">
+              <div>
                 <img :src="data.image" alt="" class="image" />
-              </router-link>
+              </div>
               <div class="card-body ">
-                <router-link to="pembayaran" style="text-decoration: none;">
+                <div>
                   <div class="judul">
                     <p style="color:gray; font-size:14px">
                       {{ data.kategoriId.kategoriName }}
@@ -187,7 +190,7 @@
                       {{ data.judul }}
                     </p>
                   </div>
-                </router-link>
+                </div>
                 <div class="foot">
                   <div class="foot_left">
                     <p class="donasi">Donasi Terkumpul</p>
@@ -248,6 +251,9 @@
   .grup {
     width: 100%;
     gap: 15px;
+    @media (max-width:375px) {
+      overflow-y: scroll;    
+    }
     .button {
       width: 100%;
       height: 40px;
@@ -270,6 +276,7 @@
     .card {
       width: 100%;
       margin: 20px 0px;
+      cursor: pointer;
       .image {
         width: 100%;
         height: 200px;

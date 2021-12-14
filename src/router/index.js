@@ -7,35 +7,39 @@ import Profile from "../pages/Profile";
 import IsiBerita from "../pages/IsiBerita";
 import Pembayaran from "../pages/Pembayaran";
 import Login from "../pages/Login";
-import i18n from '../i18n'
+import Faq from "../pages/Faq";
+import NoRek from "../pages/NoRek";
+import i18n from "../i18n";
 
 Vue.use(Router);
 
 let router = new Router({
   routes: [
     {
-      path: '/',
-      redirect: `/${i18n.locale}`
+      path: "/",
+      redirect: `/${i18n.locale}`,
     },
     {
       path: "/:lang",
       component: {
-        render (c) { return c('router-view') }
+        render(c) {
+          return c("router-view");
+        },
       },
       children: [
         {
           path: "/",
-          name: "Home",
+          name: "home",
           components: {
             default: Home,
           },
         },
         {
-          path : "login",
-          name : "Login",
+          path: "login",
+          name: "login",
           components: {
             default: Login,
-          }
+          },
         },
         {
           path: "infaq",
@@ -46,31 +50,45 @@ let router = new Router({
         },
         {
           path: "layanan",
-          name: "Layanan",
-          components : {
-            default : Layanan
-          }
+          name: "layanan",
+          components: {
+            default: Layanan,
+          },
         },
         {
           path: "profile",
-          name: "Profile",
-          components : {
-            default : Profile
-          }
+          name: "profile",
+          components: {
+            default: Profile,
+          },
         },
         {
           path: "isi-berita",
-          name: "IsiBerita",
-          components : {
-            default : IsiBerita
-          }
+          name: "isi-berita",
+          components: {
+            default: IsiBerita,
+          },
         },
         {
           path: "pembayaran",
-          name: "Pembayaran",
-          components : {
-            default : Pembayaran
-          }
+          name: "pembayaran",
+          components: {
+            default: Pembayaran,
+          },
+        },
+        {
+          path: "faq",
+          name: "faq",
+          components: {
+            default: Faq,
+          },
+        },
+        {
+          path: "norek",
+          name: "norek",
+          components: {
+            default: NoRek,
+          },
         },
       ],
     },

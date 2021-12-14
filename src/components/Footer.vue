@@ -5,31 +5,40 @@
         <div class="row">
           <!-- Kolom 1 -->
           <div class="col-md-4">
-            <h4>Kantor Layanan Lazizmu SMP MDS</h4>
+            <h4>{{ $t("footer.kantor") }}</h4>
             <div class="paragraf">
               <p>
-                Jl. Warung Jati Barat No.14 Jakarta Selatan 12540, <br />
-                Indonesia
+                {{ $t("footer.alamat") }}
               </p>
               <br />
-              <p><b-icon icon="telephone"></b-icon> (024) 8660268</p>
-              <p><b-icon icon="phone"></b-icon> 085866897627 (Whatsapp)</p>
+              <p><b-icon icon="telephone"></b-icon> Lorem ipsum dolor</p>
+              <p>
+                <b-icon icon="phone"></b-icon> Lorem ipsum dolor ({{
+                  $t("footer.wa")
+                }})
+              </p>
             </div>
           </div>
           <!-- End Kolom 1 -->
           <!-- Kolom 2 -->
           <div class="col-md-3">
-            <h4>Tentang Kami</h4>
+            <h4>{{ $t("footer.tentang") }}</h4>
             <ul>
-              <li><a href="#">Profil</a></li>
-              <li><a href="/#program">Program</a></li>
-              <li><a href="/infaq">Infaq</a></li>
+              <li>
+                <a :href="`/${$i18n.locale}/profile`">{{ $t("footer.profil") }}</a>
+              </li>
+              <li>
+                <a href="/">{{ $t("footer.program") }}</a>
+              </li>
+              <li>
+                <a :href="`/${$i18n.locale}/infaq`">{{ $t("footer.infaq") }}</a>
+              </li>
             </ul>
           </div>
           <!-- End Kolom 2 -->
           <!-- Kolom 3 -->
           <div class="col-md-5">
-            <h4>Social Media</h4>
+            <h4>{{ $t("footer.media_sosial") }}</h4>
             <div class="social-links">
               <a
                 class="h2 mb-2"
@@ -48,7 +57,7 @@
           </div>
           <!-- End Kolom 3 -->
           <!-- Copyright -->
-          <div class="copy">
+         <div class="copy">
             <!-- <i class="icon-message"></i> -->
             <a href="#" target="_top">
               COPYRIGHT © 2021 PORTAL DONASI LAZIMU-MDS</a
@@ -95,10 +104,12 @@ a:hover {
 }
 
 .row {
-  // border: 1px solid red;
   // display: flex;
   // flex-wrap: wrap;
-  padding: 30px 20px 10px 30px;
+  padding: 30px 20px 0px 30px;
+  @media (max-width:768px) {
+    padding: 0px;
+  }
 }
 .col-md-4 {
   // border: 1px solid blue;
@@ -107,7 +118,6 @@ a:hover {
     font-size: 20px;
     font-weight: bold;
   }
-
   .paragraf {
     padding: 10px;
   }
@@ -115,13 +125,11 @@ a:hover {
 
 .col-md-3 {
   // border: 1px solid orange;
-
   h4 {
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
   }
-
   ul {
     // border: 1px solid red;
     padding: 10px;
@@ -142,7 +150,6 @@ a:hover {
 }
 
 .copy {
-  // border: 1px solid red;
   text-align: center;
   padding: 10px;
   font-size: 12px;
@@ -163,6 +170,7 @@ a:hover {
   margin-bottom: 35px;
   font-weight: 500;
   position: relative;
+  border: 1px solid;
 }
 .footer-col h4::before {
   content: "";

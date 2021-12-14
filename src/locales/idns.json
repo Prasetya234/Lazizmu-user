@@ -1,0 +1,67 @@
+{
+  "message": "hello i18n !!",
+  "nav": {
+    "program": "Program",
+    "layanan": "Layanan",
+    "berita": "Berita",
+    "tentang_kami": "Tentang Kami",
+    "infaq": "Infaq Sekarang",
+    "beritaName": "Berita",
+    "list": "Aktivitas Ikhtiar Lazizmu untuk terus menebar kebaikan keseluruhan penjuru dunia."
+  },
+  "layanan": {
+    "first": "Jemput Zakat",
+    "second": "Kalkulator Zakat",
+    "third": "Konfirmasi Donasi",
+    "fourth": "Konsultasi"
+  },
+  "profil": {
+    "profile": "Profil",
+    "pengertian": "Pengertian",
+    "pengertian_content": "MDS PHILANTRHOPY CENTER ialah program bekerja sama sekolah dengan LAZISMU yang dirancang untuk menghimpun, menyalurkan dan mengembangkan dana zakat, infak, dan sedekah masyarakat untuk pengembangan program-program sekolah.",
+    "maksud": "Maksud Dan Tujuan",
+    "maksud_content": "Maksud dan Tujuan program MDS PHILANTRHOPY CENTER ialah menghimpun, menyalurkan dan mengembangkan dana zakat, infak, sedekah dan wakaf sehingga dapat mendukung pengembangan program-program sekolah.",
+    "jenis": "Jenis Program",
+    "jenis_content": "INFAQ MUQOYAD PRODUKTIF (KOLAM LELE, KEBUN JAHE MERAH, LAPAK LELE, DLL) INFAQ FI SABILILLAH (fokus utama untuk program MDS al Qur’an Academy)",
+    "first": "QURBAN ITU KEREN",
+    "second": "JUM’AT BERKAH",
+    "third": "BAKTI SOSIAL",
+    "fourth": "BEASISWA MENTARI",
+    "fiveth": "PEDULI GURU"
+  },
+  "program_kami": {
+    "title": "Program Kami",
+    "content": "Kantor Layanan Lazizmu SMP MDS memiliki 3 pilar program utama yang memiliki tujuan besar dalam membantu membangun sebuah pondasi dasar sebuah negara."
+  },
+  "pondasi": {
+    "title_ekonomi": "Ekonomi",
+    "content_ekonomi": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_sosial": "Sosial",
+    "content_sosial": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_pendidikan": "Pendidikan",
+    "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  },
+  "footer": {
+    "kantor": "Kantor Layanan Lazizmu SMP MDS",
+    "alamat": "Jl. Warung Jati Barat No.14 Jakarta Selatan 12540, Indonesia",
+    "wa": "Whatsapp",
+    "tentang": "Tentang Kami",
+    "profil": "Profil",
+    "program": "Program",
+    "infaq": "Infaq",
+    "media_sosial": "Social Media"
+  },
+  "pembayaran": {
+    "head": "Selamat datang di portal infaq, infaq aman dan mudah",
+    "judul_card2": "Profil Donatur",
+    "sapaan": "Sapaan",
+    "nama": "Nama Lengkap",
+    "tlp": "Telepon / HP",
+    "alamat": "Alamat",
+    "contoh": "Contoh: 085717527494",
+    "jumlah": "Jumlah (Rp.)",
+    "minimal": "Minimal : 10000",
+    "judul_card3": "Silahkan pilih metode pembayaran :",
+    "button": "Infaq Sekarang"
+  }
+}

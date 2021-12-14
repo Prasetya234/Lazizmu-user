@@ -1,0 +1,67 @@
+{
+  "message": "سلام i18n !!",
+  "nav": {
+    "program": "برنامج",
+    "layanan": "خدمة",
+    "berita": "أخبار",
+    "tentang_kami": "معلومات عنا",
+    "infaq": "إنفاق الآن",
+    "beritaName": "أخبار",
+    "list": "جهود Lazizmu لمواصلة نشر الخير في جميع أنحاء العالم."
+  },
+  "footer": {
+    "kantor": "MDS Middle School Lazizmu Service Office",
+    "alamat": "Jl. Warung Jati Barat No.14 Jakarta Selatan 12540, Indonesia",
+    "wa": "ال WhatsApp",
+    "tentang": "معلومات عنا",
+    "profil": "الملف الشخصي",
+    "program": "برنامج",
+    "infaq": "انفاق",
+    "media_sosial": "وسائل التواصل الاجتماعي"
+  },
+  "profil": {
+    "profile": "الملف الشخصي",
+    "pengertian": "تعريف",
+    "pengertian_content": "MDS PHILANTRHOPY CENTER هو برنامج تعاون مدرسي مع LAZISMU مصمم لجمع وتوزيع وتطوير أموال الزكاة والإنفاق والصدقات المجتمعية",
+    "maksud": "والغرض والأهداف",
+    "maksud_content": "الغرض والهدف من برنامج MDS PHILANTRHOPY CENTER هو جمع وتوزيع وتطوير أموال الزكاة والإنفاق والزكاة والوقف حتى يتمكنوا من دعم تطوير البرامج المدرسية.",
+    "jenis": "نوع البرنامج",
+    "jenis_content": "مقيد إنفاق المنتج (بركة سمك السلور ، حديقة الزنجبيل الحمراء ، لاباك ليلي ، إلخ)",
+    "first": "التضحية باردة",
+    "second": "جمعة مباركة",
+    "third": "الخدمة الاجتماعية",
+    "fourth": "منحة مينتاري",
+    "fiveth": "معلمو الرعاية"
+  },
+  "layanan": {
+    "first": "أخذ الزكاة",
+    "second": "حاسبة الزكاة",
+    "third": "تأكيد التبرع",
+    "fourth": "التشاور"
+  },
+  "program_kami": {
+    "title": "برامجنا",
+    "content": "لدى مكتب خدمات Lazizmu SMP MDS ثلاث ركائز رئيسية للبرامج لها هدف كبير في المساعدة على بناء أساس أساسي للبلد."
+  },
+  "pondasi": {
+    "title_ekonomi": "اقتصاد",
+    "content_ekonomi": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_sosial": "اجتماعي",
+    "content_sosial": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "title_pendidikan": "تعليم",
+    "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  },
+  "pembayaran": {
+    "head": "مرحبا بكم في بوابة إنفاق ، إنفاق آمنة وسهلة",
+    "judul_card2": "الملف الشخصي للمانح",
+    "sapaan": "تحية",
+    "nama": "الاسم بالكامل",
+    "tlp": "الهاتف / الهاتف المحمول",
+    "alamat": "تبوك",
+    "contoh": "مثال: 085717527494",
+    "jumlah": "المبلغ (روبية).",
+    "minimal": "الحد الأدنى: 10000",
+    "judul_card3": "الرجاء اختيار طريقة الدفع:",
+    "button": "Infaq الآن"
+  }
+}

@@ -23,6 +23,10 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import { ValidationObserver, ValidationProvider, extend } from "vee-validate";
 import * as rules from "vee-validate/dist/rules";
 import i18n from "./i18n";
+// carousel
+// import Carousel3d from 'vue-carousel-3d';
+
+// Vue.use(Carousel3d);
 
 Vue.use(BootstrapVue);
 
@@ -58,6 +62,7 @@ Object.keys(rules).forEach((rule) => {
 
 Vue.component("ValidationObserver", ValidationObserver);
 Vue.component("ValidationProvider", ValidationProvider);
+
 
 router.beforeEach((to, from, next) => {
   // use the language from the routing param or default language

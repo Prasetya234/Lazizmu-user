@@ -8,6 +8,10 @@
       </div>
       <div class="body">
         <!-- <b-card-group deck class="top-card"> -->
+        <div class="program">
+          <img :src="beritaAll.image">
+          <p>Anda akan berdonasi untuk program: <br> <strong>{{ beritaAll.judul }}</strong></p>
+        </div>
         <b-row class="pembungkus_b-col">
           <!-- card1 -->
           <b-col>
@@ -68,7 +72,7 @@
                 <p>{{ $t("pembayaran.judul_card3") }}</p>
               </div>
               <div class="card-body">
-                <b-tabs>
+                <!-- <b-tabs> -->
                   <b-tab title="Online Payment" active>
                     <div v-for="(data, index) in logo_image" :key="index">
                       <b-form-radio name="some-radios" class="image">
@@ -76,14 +80,14 @@
                       </b-form-radio>
                     </div>
                   </b-tab>
-                  <b-tab title="Transfer Bank">
+                  <!-- <b-tab title="Transfer Bank">
                     <div v-for="(data2, index) in logo_image_bank" :key="index">
                       <b-form-radio name="some-radios" class="image"
                         ><img :src="data2.image" alt="logo" class="logo"
                       /></b-form-radio>
                     </div>
-                  </b-tab>
-                </b-tabs>
+                  </b-tab> -->
+                <!-- </b-tabs> -->
               </div>
               <div class="card-footer">
                 <div class="btn-infaq">
@@ -237,7 +241,7 @@
     margin: auto;
     p {
       width: 100%;
-      //   border: 1px solid black;
+        // border: 1px solid black;
       margin-top: 40px;
       border-radius: 5px;
       background: #fcf8e3;
@@ -256,6 +260,7 @@
 
   // body
   .body {
+    // border: 1px solid;
     width: 85%;
     margin: auto;
     .pembungkus_b-col {
@@ -381,6 +386,35 @@
           height: auto;
           color: green;
         }
+      }
+    }
+    .program {
+      display: flex;
+      padding: 20px 30px;
+      margin:auto;
+      gap: 15px;
+      border: 1px solid rgb(173, 173, 173);
+      margin-bottom: 20px;
+      @media (max-width:700px) {
+        display: inline-block;      
+        padding: 10px 20px; 
+      }
+      img {
+        width: auto;
+        height: 150px;
+        @media (max-width:700px) {
+          width: 100%;
+          height: auto;
+        }
+      }
+      p {
+        font-size: 18px;
+        @media (max-width:700px) {
+          padding-top: 10px;
+        }
+      }
+      strong {
+        font-size: 20px;
       }
     }
   }

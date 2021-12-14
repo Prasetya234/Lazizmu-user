@@ -3,14 +3,25 @@ export default {
   data() {
     return {};
   },
-  methods : {
-    muncul_search() {
-      var search = document.getElementById("Search");
-      if (search.style.display === "none") {
-        search.style.display = "block";        
+  methods: {
+    languange(val) {
+      if (val === "ID") {
+        if (this.$router.history.current.path !== "/idn/" + this.$route.name) {
+          if (this.$route.name === "home") {
+            this.$router.push("/idn");
+          } else {
+            this.$router.push("/idn/" + this.$route.name);
+          }
+        }
       } else {
-        search.style.display = "none";
+        if (this.$router.history.current.path !== "/arb/" + this.$route.name) {
+          if (this.$route.name === "home") {
+            this.$router.push("/arb");
+          } else {
+            this.$router.push("/arb/" + this.$route.name);
+          }
+        }
       }
-    }
-  }
+    },
+  },
 };

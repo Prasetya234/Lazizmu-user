@@ -4,16 +4,26 @@
       <nav>
         <!-- Image Slider 1 -->
         <div class="slider1">
-          <div id="slider">
+          <b-loading
+                :is-full-page="false"
+                v-model="isLoading"
+                :can-cancel="true"
+          ></b-loading>
+          <!-- <div id="slider">
             <div class="slider">
               <b-loading
                 :is-full-page="false"
                 v-model="isLoading"
                 :can-cancel="true"
               ></b-loading>
-              <ul class="slides" :style="{ left: -width * current + 'px' }">
-                <li v-for="(slide, index) in berita" :key="index">
-                  <img :src="slide.image" alt="logo" />
+              <ul
+                class="slides"
+                :style="{ left: -width * current + 'px' }"
+                v-for="(slide, index) in berita"
+                :key="index"
+              >
+                <li>
+                  <img :src="slide.image" />
                 </li>
               </ul>
               <ul class="bullets">
@@ -24,10 +34,32 @@
                   @click="selectSlide(index)"
                 ></li>
               </ul>
-              <!-- <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a>
-            <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a> -->
+              <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a>
+            <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a>
             </div>
-          </div>
+          </div> -->
+          <div class="slider1_pc">
+              <vueper-slides autoplay
+                fixed-height="300px"
+                class="no-shadow"
+                :visible-slides="3"
+                :gap="1"
+                :slide-ratio="1/4"
+                :dragging-distance="70">
+                <vueper-slide v-for="(slide, i) in berita" :key="i" :image="slide.image"/>
+              </vueper-slides>
+            </div>
+            <div class="slider1_resp">
+              <vueper-slides autoplay
+                fixed-height="300px"
+                class="no-shadow"
+                :visible-slides="1"
+                :gap="1"
+                :slide-ratio="1/4"
+                :dragging-distance="70">
+                <vueper-slide v-for="(slide, i) in berita" :key="i" :image="slide.image"/>
+              </vueper-slides>
+            </div>
         </div>
         <!-- End Image Slider 1 -->
         <!-- Card Kalimat -->
@@ -40,12 +72,11 @@
         <!-- End Card Kalimat -->
 
         <!-- Card Content -->
-        <div class="card-content" id="program">
+        <div class="card-content">
           <div class="row">
-            <div class="col-md-4">
+            <div class="">
               <img
                 src="@/assets/ekonomi.png"
-                alt=""
                 width="100px"
                 height="100px"
               />
@@ -54,10 +85,9 @@
                 {{ $t("pondasi.content_ekonomi") }}
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="">
               <img
                 src="@/assets/sosial.png"
-                alt=""
                 width="100px"
                 height="100px"
               />
@@ -66,10 +96,9 @@
                 {{ $t("pondasi.content_sosial") }}
               </p>
             </div>
-            <div class="col-md-4">
+            <div class="">
               <img
                 src="@/assets/pendidikan.png"
-                alt=""
                 width="100px"
                 height="100px"
               />
@@ -82,57 +111,80 @@
         </div>
         <!-- Content Tiga -->
         <div class="content-tiga" id="berita">
-          <h3>Berita</h3>
+          <h3>{{ $t("nav.beritaName") }}</h3>
           <p>
-            Aktivitas Ikhtiar Lazizmu untuk terus menebar kebaikan keseluruhan
-            penjuru dunia.
+            {{ $t("nav.list") }}
           </p>
         </div>
         <!-- End Content Tiga -->
         <!-- Image SLider 2 -->
         <div class="slider2">
-          <div id="slider">
-            <div class="slider">
+          <div class="slider2_pc">
+            <vueper-slides autoplay
+              fixed-height="300px"
+              class="no-shadow"
+              :visible-slides="3"
+              :gap="1"
+              :slide-ratio="1/4"
+              :dragging-distance="70">
+              <vueper-slide v-for="(slide, i) in slide_image" :key="i" :image="slide"/>
+            </vueper-slides>
+          </div>
+          <div class="slider2_resp">
+            <vueper-slides autoplay
+              fixed-height="300px"
+              class="no-shadow"
+              :visible-slides="1"
+              :gap="1"
+              :slide-ratio="1/4"
+              :dragging-distance="70">
+              <vueper-slide v-for="(slide, i) in slide_image" :key="i" :image="slide"/>
+            </vueper-slides>
+          </div>
+          <!-- <div id="slider">
+             <div class="slider">
               <b-loading
                 :is-full-page="false"
                 v-model="isLoading"
                 :can-cancel="true"
               ></b-loading>
-              <ul class="slides" :style="{ left: -width * current + 'px' }">
-                <li v-for="(slide, index) in berita" :key="index">
-                  <img :src="slide.image" alt="logo" />
+              <ul
+                class="slides"
+                :style="{ left: -width * current + 'px' }"
+                v-for="(slide, index) in slide_image"
+                :key="index"
+              >
+                <li>
+                  <img :src="slide" />
                 </li>
               </ul>
               <ul class="bullets">
                 <li
-                  v-for="(slide, index) in berita"
+                  v-for="(slide, index) in slide_image"
                   :key="index"
                   v-html="i == current ? '&#9679;' : '&omicron;'"
                   @click="selectSlide(index)"
                 ></li>
               </ul>
-              <!-- <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a> -->
-              <!-- <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a> -->
+              <a class="prev" href="#" @click.prevent="prevSlide">&#x25C0;</a>
+              <a class="next" href="#" @click.prevent="nextSlide">&#x25B6;</a>
             </div>
-          </div>
+          </div> -->
         </div>
-        <br />
+       
         <!-- End Slider Image 2 -->
         <!-- Card Content 2 -->
         <div class="card-dua">
           <div class="kanan">
-            <!-- <router-link
-              :to="`/${$i18n.locale}/isi-berita`"
-              style="text-decoration:none"
-            > -->
             <div
-              class="bungkus"
+              class="bungkus "
               v-for="(data, index) in berita"
               :key="index"
               id="zoom-In"
             >
               <div
                 style="
+                  width: 30px;
                   cursor: pointer;
                   font-weight: bold;
                   font-size: 15px;
@@ -145,7 +197,7 @@
               </div>
               <div class="catatan">
                 <p>{{ data.kategoriId.kategoriName }}</p>
-                <p style="text-align: right;">
+                <p style="text-align: right">
                   {{ data.createdDate }}
                 </p>
               </div>
@@ -176,17 +228,47 @@
 }
 
 .slider2 {
-  margin-top: -50px;
+  width: 80%;
+  margin: auto;
+  @media (max-width:768px) {
+    width: 90%;    
+  }
+  &_pc{
+  @media (max-width:769px) {
+    display: none;
+  }
+  }
+  &_resp{
+  @media (min-width:769px) {
+    display: none;
+  }
+  }
 }
 
 .slider1 {
-  margin-top: 50px;
+  padding-top: 50px; 
+  width: 80%;
+  margin: auto;
+  @media (max-width:768px) {
+    width: 90%;    
+  }
+  &_pc{
+  @media (max-width:769px) {
+    display: none;
+  }
+  }
+  &_resp{
+  @media (min-width:769px) {
+    display: none;
+  }
+  }
 }
 
 .slider {
   margin: 0 auto;
   padding: 0;
   width: 800px;
+  max-width: 100%;
   height: 500px;
   position: relative;
   overflow: hidden;
@@ -209,7 +291,7 @@
     }
   }
   ul.bullets {
-    width: inherit;
+    width: 100%;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -221,6 +303,7 @@
       list-style-type: none;
       display: inline;
       color: #fff;
+      // color: #e78d0d;
       cursor: pointer;
       padding: 0 5px;
       font-size: 20px;
@@ -264,7 +347,6 @@ nav {
 
 // Card Kalimat
 .kalimat {
-  // border: 1px solid red;
   text-align: center;
   padding: 20px;
   margin: 20px 0px 20px 0px;
@@ -276,7 +358,8 @@ nav {
   p {
     margin: auto;
     // border: 1px solid red;
-    width: 700px;
+    max-width: 700px;
+    width: 100%;
     font-size: 20px;
   }
 }
@@ -284,14 +367,20 @@ nav {
 
 // Card Content
 .card-content {
-  // border: 1px solid red;
-  .row {
-    padding: 20px 80px 30px 110px;
+  padding: 30px 150px;
+  @media (max-width:768px) {
+    padding: 20px;
   }
-  .col-md-4 {
+  .row {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    @media (max-width:425px) {
+      padding: 10px;
+      grid-template-columns: repeat(1,1fr);
+      gap: 20px;
+    }
   }
   img {
-    // background: black;
     border-radius: 50%;
   }
   h4 {
@@ -355,7 +444,10 @@ nav {
 // Content Tiga
 .content-tiga {
   text-align: center;
-  padding: 50px 50px 100px 50px;
+  padding: 50px 50px 50px 50px;
+  @media (max-width: 768px) {
+  padding: 30px 20px;
+  }
   h3 {
     font-size: 36px;
     color: black;
@@ -363,6 +455,10 @@ nav {
   }
   p {
     font-size: 20px;
+    margin: auto;
+    // border: 1px solid red;
+    max-width: 700px;
+    width: 100%;
   }
 }
 // End Content Tiga
@@ -371,16 +467,25 @@ nav {
 // End Image Slider 2
 // Card Content 2
 .card-dua {
-  // border: 1px solid red;
+  // @media (max-width:768px) {
+  //   overflow-y: scroll;    
+  // }
   .kanan {
-    padding: 10px 0px 10px 0px;
-    width: 85%;
+    // padding: 10px 0px 10px 0px;
+    padding: 10px 100px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+    @media (max-width:1200px) {
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px 30px;
+    }
+     @media (max-width:600px) {
+      grid-template-columns: repeat(1, 1fr);
+      padding: 10px 20px;
+    }
     .bungkus {
-      width: 100%;
+      margin: 0px 5px;
       height: auto;
     }
   }
@@ -404,11 +509,22 @@ nav {
     color: #ccc;
     font-size: 12px;
     font-weight: 500;
-    @media (max-width: 768px) {
-      display: inline-block;
-    }
   }
 }
+// button lihat semua
+  .foot-button {
+    .lihat {
+      width: 130px;
+      height: 40px;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      display: block;
+      background-color: #ed8721;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 
 .kanan #zoom-In img {
   transform: scale(1);

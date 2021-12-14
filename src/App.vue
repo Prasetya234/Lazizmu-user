@@ -1,6 +1,6 @@
 <template>
   <div>
-     <NavBar />
+    <NavBar />
     <router-view></router-view>
     <Footer />
   </div>
@@ -11,6 +11,10 @@ import NavBar from "./components/NavBar.vue";
 import Footer from "./components/Footer.vue";
 export default {
   name: "App",
+  created() {
+    const languange = JSON.stringify(false);
+    localStorage.setItem("languange", languange);
+  },
   components: {
     NavBar,
     Footer,

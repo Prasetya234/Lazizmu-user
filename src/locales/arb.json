@@ -5,11 +5,48 @@
     "layanan": "خدمة",
     "berita": "أخبار",
     "tentang_kami": "معلومات عنا",
-    "infaq": "إنفاق الآن"
+    "infaq": "إنفاق الآن",
+    "beritaName": "أخبار",
+    "list": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  },
+  "footer": {
+    "kantor": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "alamat": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "wa": "ال WhatsApp",
+    "tentang": "معلومات عنا",
+    "profil": "الملف الشخصي",
+    "program": "برنامج",
+    "infaq": "انفاق",
+    "media_sosial": "وسائل التواصل الاجتماعي"
+  },
+  "profil": {
+    "profile": "الملف الشخصي",
+    "pengertian": "تعريف",
+    "pengertian_content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "maksud": "والغرض والأهداف",
+    "maksud_content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "jenis": "نوع البرنامج",
+    "jenis_content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "first": "Lorem ipsum dolor",
+    "second": "Lorem ipsum dolor",
+    "third": "Lorem ipsum dolor",
+    "fourth": "Lorem ipsum dolor",
+    "fiveth": "Lorem ipsum dolor"
+  },
+  "layanan": {
+    "first": "أخذ الزكاة",
+    "third": "تأكيد التبرع",
+    "fourth": "التشاور"
+  },
+  "faq": {
+    "faq": "Faq"
+  },
+  "norek": {
+    "norek": "Nomor Rekening"
   },
   "program_kami": {
     "title": "برامجنا",
-    "content": "لدى مكتب خدمات Lazizmu SMP MDS ثلاث ركائز رئيسية للبرامج لها هدف كبير في المساعدة على بناء أساس أساسي للبلد."
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
   },
   "pondasi": {
     "title_ekonomi": "اقتصاد",
@@ -19,17 +56,17 @@
     "title_pendidikan": "تعليم",
     "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
   },
-  "pembayaran" : {
-    "head" : "مرحبا بكم في بوابة إنفاق ، إنفاق آمنة وسهلة",
-    "judul_card2" : "الملف الشخصي للمانح",
-    "sapaan" : "تحية",
-    "nama" : "الاسم بالكامل",
-    "tlp" : "الهاتف / الهاتف المحمول",
-    "alamat" : "تبوك",
-    "contoh" : "مثال: 085717527494",
-    "jumlah" : "المبلغ (روبية).",
-    "minimal" : "الحد الأدنى: 10000",
-    "judul_card3" : "الرجاء اختيار طريقة الدفع:",
+  "pembayaran": {
+    "head": "مرحبا بكم في بوابة إنفاق ، إنفاق آمنة وسهلة",
+    "judul_card2": "الملف الشخصي للمانح",
+    "sapaan": "تحية",
+    "nama": "الاسم بالكامل",
+    "tlp": "الهاتف / الهاتف المحمول",
+    "alamat": "تبوك",
+    "contoh": "مثال: 085717527494",
+    "jumlah": "المبلغ (روبية).",
+    "minimal": "الحد الأدنى: 10000",
+    "judul_card3": "الرجاء اختيار طريقة الدفع:",
     "button": "Infaq الآن"
   }
 }

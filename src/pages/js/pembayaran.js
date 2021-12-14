@@ -43,11 +43,23 @@ export default {
           image: mandiri,
         },
       ],
+      beritaEkonomi:[],
+      beritaSosial: [],
+      beritaAll:[]
     };
   },
   methods: {
+    getDataSesionNews() {
+      // let beritaEkonomi = sessionStorage.getItem("beritaEkonomi");
+      // this.beritaEkonomi = JSON.parse(beritaEkonomi);
+      // let beritaSosial = sessionStorage.getItem("beritaEkonomi");
+      // this.beritaSosial = JSON.parse(beritaSosial);
+      let beritaAll = sessionStorage.getItem("beritaAll");
+      this.beritaAll = JSON.parse(beritaAll);
+    },
   },
   mounted() {
+    this.getDataSesionNews();
     window.scrollTo(0, 0);
   },
 };

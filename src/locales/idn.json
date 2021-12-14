@@ -5,11 +5,38 @@
     "layanan": "Layanan",
     "berita": "Berita",
     "tentang_kami": "Tentang Kami",
-    "infaq": "Infaq Sekarang"
+    "infaq": "Infaq Sekarang",
+    "beritaName": "Berita",
+    "list": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
+  },
+  "layanan": {
+    "first": "Jemput Zakat",
+    "third": "Konfirmasi Donasi",
+    "fourth": "Konsultasi"
+  },
+  "faq": {
+    "faq": "Faq"
+  },
+  "norek": {
+    "norek": "Nomor Rekening"
+  },
+  "profil": {
+    "profile": "Profil",
+    "pengertian": "Pengertian",
+    "pengertian_content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "maksud": "Maksud Dan Tujuan",
+    "maksud_content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "jenis": "Jenis Program",
+    "jenis_content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "first": "Lorem ipsum dolor",
+    "second": "Lorem ipsum dolor",
+    "third": "Lorem ipsum dolor",
+    "fourth": "Lorem ipsum dolor",
+    "fiveth": "Lorem ipsum dolor"
   },
   "program_kami": {
     "title": "Program Kami",
-    "content": "Kantor Layanan Lazizmu SMP MDS memiliki 3 pilar program utama yang memiliki tujuan besar dalam membantu membangun sebuah pondasi dasar sebuah negara."
+    "content": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
   },
   "pondasi": {
     "title_ekonomi": "Ekonomi",
@@ -19,17 +46,27 @@
     "title_pendidikan": "Pendidikan",
     "content_pendidikan": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!."
   },
-  "pembayaran" : {
-    "head" : "Selamat datang di portal infaq, infaq aman dan mudah",
-    "judul_card2" : "Profil Donatur",
-    "sapaan" : "Sapaan",
-    "nama" : "Nama Lengkap",
-    "tlp" : "Telepon / HP",
-    "alamat" : "Alamat",
-    "contoh" : "Contoh: 085717527494",
-    "jumlah" : "Jumlah (Rp.)",
-    "minimal" : "Minimal : 10000",
-    "judul_card3" : "Silahkan pilih metode pembayaran :",
+  "footer": {
+    "kantor": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "alamat": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id atque vel nam soluta sit debitis quae quo ad, laudantium incidunt quas culpa earum quaerat dolores impedit deleniti, doloribus nobis nostrum!.",
+    "wa": "Whatsapp",
+    "tentang": "Tentang Kami",
+    "profil": "Profil",
+    "program": "Program",
+    "infaq": "Infaq",
+    "media_sosial": "Social Media"
+  },
+  "pembayaran": {
+    "head": "Selamat datang di portal infaq, infaq aman dan mudah",
+    "judul_card2": "Profil Donatur",
+    "sapaan": "Sapaan",
+    "nama": "Nama Lengkap",
+    "tlp": "Telepon / HP",
+    "alamat": "Alamat",
+    "contoh": "Contoh: 085717527494",
+    "jumlah": "Jumlah (Rp.)",
+    "minimal": "Minimal : 10000",
+    "judul_card3": "Silahkan pilih metode pembayaran :",
     "button": "Infaq Sekarang"
   }
 }
