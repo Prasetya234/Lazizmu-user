@@ -8,6 +8,7 @@ import IsiBerita from "../pages/IsiBerita";
 import Pembayaran from "../pages/Pembayaran";
 import Login from "../pages/Login";
 import Faq from "../pages/Faq";
+import Testing from "../pages/Testing";
 import NoRek from "../pages/NoRek";
 import i18n from "../i18n";
 
@@ -19,6 +20,7 @@ let router = new Router({
       path: "/",
       redirect: `/${i18n.locale}`,
     },
+
     {
       path: "/:lang",
       component: {
@@ -32,6 +34,13 @@ let router = new Router({
           name: "home",
           components: {
             default: Home,
+          },
+        },
+        {
+          path: "testing",
+          name: "testing",
+          components: {
+            default: Testing,
           },
         },
         {
@@ -62,6 +71,7 @@ let router = new Router({
             default: Profile,
           },
         },
+
         {
           path: "isi-berita",
           name: "isi-berita",

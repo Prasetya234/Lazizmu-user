@@ -31,7 +31,7 @@
 
 <script src="./js/profile.js" />
 
-<style lang="scss" scopeds>
+<style lang="scss" scoped>
   .all {
     max-width: 1440px;
     margin: auto;

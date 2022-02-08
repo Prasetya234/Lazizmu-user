@@ -76,7 +76,7 @@
           <div class="row">
             <div class="">
               <img
-                src="@/assets/ekonomi.png"
+                src="@/assets/logo_nww/icon1.png"
                 width="100px"
                 height="100px"
               />
@@ -87,7 +87,7 @@
             </div>
             <div class="">
               <img
-                src="@/assets/sosial.png"
+                src="@/assets/logo_nww/icon2.png"
                 width="100px"
                 height="100px"
               />
@@ -98,7 +98,7 @@
             </div>
             <div class="">
               <img
-                src="@/assets/pendidikan.png"
+                src="@/assets/logo_nww/icon3.png"
                 width="100px"
                 height="100px"
               />
@@ -381,7 +381,7 @@ nav {
     }
   }
   img {
-    border-radius: 50%;
+  //   border-radius: 50%;
   }
   h4 {
     color: black;

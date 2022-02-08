@@ -37,14 +37,14 @@
       </div>
       <!-- Share -->
       <div class="share">
-        <p class="link"> 
-          Bagikan ini: <br class="break"><br class="break">
+        <p class="link">
+          Bagikan ini: <br class="break" /><br class="break" />
           <a href="https://www.facebook.com/" target="_blank"
             ><b-icon icon="facebook" class="icon"></b-icon>Facebook</a
           >
           <a href="https://api.whatsapp.com/" target="_blank"
             ><b-icon icon="phone" class="icon"></b-icon>WhatsApp</a
-          ><br class="break2"><br class="break2">
+          ><br class="break2" /><br class="break2" />
           <a href="https://www.instagram.com/" target="_blank"
             ><b-icon icon="instagram" class="icon"></b-icon>Instagram</a
           >
@@ -55,7 +55,7 @@
 </template>
 <script src="./js/isiberita.js" />
 
-<style lang="scss" scoped="scoped">
+<style lang="scss" scoped>
 // All
 * {
   max-width: 1440px;
@@ -63,8 +63,8 @@
 }
 .body {
   width: 80%;
-  @media (max-width:768px){
-    width: 100%;    
+  @media (max-width: 768px) {
+    width: 100%;
   }
 }
 
@@ -145,12 +145,12 @@
     display: block;
   }
   .break {
-    @media (min-width:530px) {
+    @media (min-width: 530px) {
       display: none;
     }
   }
-   .break2 {
-    @media (min-width:435px) {
+  .break2 {
+    @media (min-width: 435px) {
       display: none;
     }
   }
@@ -159,14 +159,14 @@
   a {
     padding: 10px 10px;
     text-decoration: none;
-    color: gray;  
-    @media (max-width:530px) {
+    color: gray;
+    @media (max-width: 530px) {
       padding: 0px 10px 0px 0px;
-    } 
+    }
   }
   .icon {
     width: auto;
     margin-right: 5px;
-  } 
+  }
 }
 </style>

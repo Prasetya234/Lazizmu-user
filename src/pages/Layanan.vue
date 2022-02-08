@@ -2,7 +2,7 @@
   <div class="all">
     <div class="top">
       <div class="col" @click="clickJemputZakat">
-        <img src="@/assets/logo-layanan/mobil.png" alt="logo" class="logo"/>
+        <img src="@/assets/logo_nww/menjemput_zakat.png" alt="logo" class="logo"/>
         <div class="link" >
           <div class="text">{{
             $t("layanan.first")
@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="col" @click="clickKonfirmasiDonasi">
-        <img src="@/assets/logo-layanan/infaq.png" alt="logo" class="logo"/>
+        <img src="@/assets/logo_nww/konfirmasi_donasi.png" alt="logo" class="logo"/>
         <div class="link">
           <div class="text">{{
             $t("layanan.third")
@@ -18,7 +18,7 @@
         </div>
       </div>
       <div class="col" @click="clickKonsultasi">
-        <img src="@/assets/logo-layanan/chat.png" alt="logo" class="logo"/>
+        <img src="@/assets/logo_nww/konsultasi.png" alt="logo" class="logo"/>
         <div class="link">
           <div class="text" >{{
              $t("layanan.fourth")
@@ -109,6 +109,8 @@
     }
   }
   .logo {
+    width: 80px;
+    height: 70px;
   }
 }
 // body

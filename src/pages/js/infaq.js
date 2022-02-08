@@ -208,19 +208,19 @@ export default {
     // new
     clickBeritaInfaqEkonomi(a) {
       var b = JSON.stringify(this.beritaEkonomi[a]);
-      sessionStorage.setItem("beritaAll", b); 
+      sessionStorage.setItem("beritaAll", b);
       this.$router.push(`/${this.$i18n.locale}/pembayaran`);
       window.scrollTo(0, 0);
     },
     clickBeritaInfaqSosial(a) {
       var b = JSON.stringify(this.beritaSosial[a]);
-      sessionStorage.setItem("beritaAll", b); 
+      sessionStorage.setItem("beritaAll", b);
       this.$router.push(`/${this.$i18n.locale}/pembayaran`);
       window.scrollTo(0, 0);
     },
     clickBeritaInfaqPendidikan(a) {
       var b = JSON.stringify(this.beritaPendidikan[a]);
-      sessionStorage.setItem("beritaAll", b); 
+      sessionStorage.setItem("beritaAll", b);
       this.$router.push(`/${this.$i18n.locale}/pembayaran`);
       window.scrollTo(0, 0);
     },
